@@ -45,3 +45,11 @@ module "NIC" {
   network_interface = var.network_interface
 
 }
+
+module "linuxVM" {
+  
+  depends_on = [ module.RG,module.NIC, module.vnet1 ]
+
+  source = "../Modules/Virtual_Machine"
+  linuxVM = var.linuxVM
+}
