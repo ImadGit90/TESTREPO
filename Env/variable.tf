@@ -5,3 +5,4 @@ variable "subnet" {}
 variable "PublicIP" {}
 variable "Bastion" {}
 variable "network_interface" {}
+variable "linuxVM" {}
