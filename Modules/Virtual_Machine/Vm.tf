@@ -5,8 +5,12 @@ resource "azurerm_linux_virtual_machine" "linuxVM" {
   location            = each.value.location
   size                = "Standard_D4_v5"
   admin_username      = "adminuser"
+  admin_password = "adminP@ssword"
+
+  disable_password_authentication = false
   network_interface_ids = [
     data.azurerm_network_interface.nic[each.key].id
+    
   ]
 
 

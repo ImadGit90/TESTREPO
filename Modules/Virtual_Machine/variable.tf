@@ -3,6 +3,7 @@ variable "linuxVM" {
     name = string
     resource_group_name = string
     location = string
+    nic_name = string
   }))
 }
 

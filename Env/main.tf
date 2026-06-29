@@ -47,9 +47,9 @@ module "NIC" {
 }
 
 module "linuxVM" {
-  
-  depends_on = [ module.RG,module.NIC, module.vnet1 ]
 
-  source = "../Modules/Virtual_Machine"
+  depends_on = [module.RG, module.NIC, module.vnet1]
+
+  source  = "../Modules/Virtual_Machine"
   linuxVM = var.linuxVM
 }
